@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <link rel="icon" type="image/x-icon" href="image/logo.png">
+
+    <!-- tailwind & daisy CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- google font   -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+  <!-- font awesome CDN  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    .lexend{
+        font-family: "Lexend", sans-serif;
+    }
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+  </style>
+
+</head>
+<body class="lexend max-w-screen-2xl mx-auto">
+    <!-- navbar & banner  -->
+    <section>
+        <!-- navbar  -->
+        <section class="bg-[#F9F7F3]  pt-3 pb-8" >
+            <div class="navbar w-[90%] mx-auto  max-sm:flex-col flex justify-between">
+                <div class=" text-center justify-center  max-sm:order-3" >
+                  <a class="btn btn-ghost text-xl font-semibold bg-[#B4F461]" href="index.html">HOME</a>
+                </div>
+                <div class=" max-sm:order-1">
+                    <img class="w-12 h-12 " src="image/logo.png" alt="logo">
+                    <h1 class="px-4 text-2xl  font-bold"> Donate Bangladesh </h1>
+                </div>
+                <div class="flex text-center justify-center  max-sm:order-2   max-sm:my-4">
+                    <img class="w-7 h-7"  src="image/coin.png" alt="coin">
+                    <h2 class="text-[#111111B3] text-xl font-medium px-3"> <span class="pr-2">5500</span>BDT</h2>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- body  -->
+     <section class=" w-[90%] mx-auto  min-h-screen my-6">
+
+        <h1 class="font-bold text-2xl my-10">Important FAQ <i class="fa-regular fa-circle-question"></i></h1>
+        <div class="grid gap-1">
+            <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model(DOM)?</div>
+                <div class="collapse-content">
+                <p>The Document Object Model (DOM) is a programming interface that represents HTML, XML, and other structured documents as a tree of nodes. It allows JavaScript to access and manipulate these documents, creating dynamic and interactive web pages. Nodes in the DOM represent elements, attributes, text, and comments, and can be modified using properties and methods.</p>
+                </div>
+            </div>
+
+            <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM? </div>
+                <div class="collapse-content">
+                <p>To select an element from the DOM, you can use various methods:
+                    <br>
+                    <br>
+                    1. getElementById: Selects an element by its unique ID attribute.<br>
+                    2. getElementsByTagName: Selects all elements with a specific tag name.<br>
+                    3. getElementsByClassName: Selects all elements with a specific class name.<br>
+                    4. querySelector: Selects the first element that matches a CSS selector.    <br>                
+                    5. querySelectorAll: Selects all elements that match a CSS selector.<br><br>
+
+                    For example, to select an element with the ID "myElement", you would use document.getElementById("myElement").
+                    </p>
+                </div>
+            </div>
+
+            <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                <div class="collapse-content">
+                <p>Event delegation is a technique in JavaScript that allows you to handle events on multiple elements by adding a single event listener to a common parent element.        This is more efficient than adding individual event listeners to each element, especially when dealing with a large number of elements. <br>
+                Event delegation is useful because it improves performance by reducing the number of event listeners that need to be created and maintained. It also simplifies code by centralizing event handling logic in a single place. 
+                </p>
+                </div>
+            </div>
+
+            <div class="collapse collapse-arrow border-2">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                <div class="collapse-content">
+                <p>To manipulate an element's attributes and styles using the DOM, you can access the element's properties and modify them directly. For example, you can use getAttribute and setAttribute to modify attributes, and style and className to modify styles. This allows you to dynamically change the appearance and behavior of elements on a web page.</p>
+                </div>
+            </div>
+        </div>   
+     </section>   
+
+    <!-- footer  -->
+    <footer class="bg-[#F9F7F3]  py-10">
+    </footer>
+
+</body>
+</html>
