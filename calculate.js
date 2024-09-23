@@ -79,7 +79,8 @@ function donationCalculation(id){
         document.getElementById('totalDonation1').innerText = totalDonationAmount1 ;
         inputModal1.showModal();
         const donatedTitle = document.getElementById('donateTitle1').innerText;
-        transitionContainer(donationInputValue,donatedTitle);       
+        transitionContainer(donationInputValue,donatedTitle);  
+        document.getElementById('donationInput1').value = "";
 
     }
     else if(id === 'donationInput2'){
@@ -90,6 +91,7 @@ function donationCalculation(id){
         inputModal2.showModal();
         const donatedTitle = document.getElementById('donateTitle2').innerText;
         transitionContainer(donationInputValue,donatedTitle);
+        document.getElementById('donationInput2').value = "";
     }
     else{
         totalDonationAmount3 += donationInputValue ;
@@ -99,6 +101,7 @@ function donationCalculation(id){
         inputModal3.showModal();
         const donatedTitle = document.getElementById('donateTitle3').innerText;
         transitionContainer(donationInputValue,donatedTitle);
+        document.getElementById('donationInput3').value = "";
     }   
 }
 
@@ -106,6 +109,8 @@ function donationCalculation(id){
 
 inputButton1.addEventListener('click',function(){
     donationCalculation('donationInput1');
+    
+
 })
 inputButton2.addEventListener('click',function(){
     donationCalculation('donationInput2');
