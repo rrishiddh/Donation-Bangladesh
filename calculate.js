@@ -45,12 +45,23 @@ let totalDonationAmount3 = parseFloat(document.getElementById('totalDonation3').
 let myAccountBalance = parseFloat(document.getElementById('myBalance').innerText);
 
 
+
 // History section 
 
-function historyDetails(id){
-    document.createElement
+const historySection = document.getElementById('historySection');
+const transactionHistory = document.getElementById('transactionHistory');
 
-}
+function transitionContainer(money,place) {
+    const transaction = document.createElement('div');
+    transaction.classList.add('border-2', 'border-gray', 'p-4', 'rounded-lg', 'mb-4');
+    transaction.innerHTML = `
+
+        <p class="font-bold">${money} Taka is ${place}</p>
+        <p>Transaction Time: ${new Date()}</p>
+            
+    `;
+    transactionHistory.appendChild(transaction);   
+};
 
 // inputCalculation
 
@@ -67,7 +78,8 @@ function donationCalculation(id){
         document.getElementById('myBalance').innerText = myAccountBalance; 
         document.getElementById('totalDonation1').innerText = totalDonationAmount1 ;
         inputModal1.showModal();
-        
+        const donatedTitle = document.getElementById('donateTitle1').innerText;
+        transitionContainer(donationInputValue,donatedTitle);       
 
     }
     else if(id === 'donationInput2'){
@@ -76,7 +88,8 @@ function donationCalculation(id){
         document.getElementById('myBalance').innerText = myAccountBalance;  
         document.getElementById('totalDonation2').innerText = totalDonationAmount2 ;
         inputModal2.showModal();
-
+        const donatedTitle = document.getElementById('donateTitle2').innerText;
+        transitionContainer(donationInputValue,donatedTitle);
     }
     else{
         totalDonationAmount3 += donationInputValue ;
@@ -84,19 +97,19 @@ function donationCalculation(id){
         document.getElementById('myBalance').innerText = myAccountBalance;  
         document.getElementById('totalDonation3').innerText = totalDonationAmount3 ;
         inputModal3.showModal();
-
-    }
-   
+        const donatedTitle = document.getElementById('donateTitle3').innerText;
+        transitionContainer(donationInputValue,donatedTitle);
+    }   
 }
 
 // function call 
 
 inputButton1.addEventListener('click',function(){
-    donationCalculation('donationInput1')
+    donationCalculation('donationInput1');
 })
 inputButton2.addEventListener('click',function(){
-    donationCalculation('donationInput2')
+    donationCalculation('donationInput2');
 })
 inputButton3.addEventListener('click',function(){
-    donationCalculation('donationInput3')
+    donationCalculation('donationInput3');
 })
