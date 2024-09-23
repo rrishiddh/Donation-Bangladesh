@@ -68,8 +68,11 @@ function transitionContainer(money,place) {
 function donationCalculation(id){
     let donationInputValue = parseFloat(document.getElementById(id).value);
 
-    if(isNaN(donationInputValue) === true  || donationInputValue <= 0){
+    if(isNaN(donationInputValue) === true  || donationInputValue <= 0 ){
         return alert("Please put a valid number to donate") ;
+    }
+    if(donationInputValue > myAccountBalance){
+        return alert ("You don't have sufficient balance!")
     }
 
     if(id === 'donationInput1'){
