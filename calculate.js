@@ -69,7 +69,7 @@ function donationCalculation(id){
     let donationInputValue = parseFloat(document.getElementById(id).value);
 
     if(isNaN(donationInputValue) === true  || donationInputValue <= 0){
-        return alert("Please put positive number to donate") ;
+        return alert("Please put a valid number to donate") ;
     }
 
     if(id === 'donationInput1'){
